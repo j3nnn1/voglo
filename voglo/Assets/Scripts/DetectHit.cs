@@ -18,7 +18,7 @@ public class DetectHit : MonoBehaviour
     void isTriggerEnter(Collision col)
     {
         Debug.Log("Desde la pared isTriggerEnter : se pego con la pared");
-        Debug.Log(col);
+
     }
     void OnCollisionEnter(Collision collision)
     {
