@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ControllerPlayer.cs" />
     <Compile Include="Assets\Scripts\DetectHit.cs" />
+    <Compile Include="Assets\Scripts\moveCam.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/git/voglo/voglo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

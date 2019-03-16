@@ -14,7 +14,6 @@ public class ControllerPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * Time.deltaTime * velocity;
     }
 
     // Update is called once per frame
@@ -28,9 +27,9 @@ public class ControllerPlayer : MonoBehaviour
 
         Vector3 right, forward;
         if (localX)
-            right = transform.right;
+          right = transform.right;
         else
-            right = Vector3.right;
+          right = Vector3.right;
 
         if (localZ)
             forward = transform.forward;
@@ -46,13 +45,13 @@ public class ControllerPlayer : MonoBehaviour
         }
 
         rb.velocity = (h * Vector3.right + v * Vector3.forward) * velocity + Vector3.up * rb.velocity.y;
+        Debug.Log("Posicion jugador: " + transform.position);
         //1 transform.position += transform.forward * Time.deltaTime;
-        //2 transform.Translate(Vector3.left * Time.deltaTime);
+        //transform.Translate(Vector3.forward * Time.deltaTime); //later add difficulty
         // 3 NO ANDA rb.AddForce(transform.forward * velocity * Time.deltaTime);
-        // 4 rb.MovePosition(transform.position + (transform.forward * Time.deltaTime));
+        rb.MovePosition(transform.position + (transform.forward * Time.deltaTime)); //later add difficulty
         // 4 alternative Vector3 newPosition = transform.position + (transform.forward * Time.deltaTime);
         // 4 rb.MovePosition(newPosition);
-
     }
     void OnCollisionEnter(Collision collision)
     {
