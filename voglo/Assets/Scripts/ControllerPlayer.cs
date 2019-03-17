@@ -48,7 +48,7 @@ public class ControllerPlayer : MonoBehaviour
         }
 
         rb.velocity = (h * Vector3.right + v * Vector3.forward) * velocity + Vector3.up * rb.velocity.y;
-        Debug.Log("Posicion jugador: " + transform.position);
+        //Debug.Log("Posicion jugador: " + transform.position);
         //1 transform.position += transform.forward * Time.deltaTime;
         //transform.Translate(Vector3.forward * Time.deltaTime); //later add difficulty
         // 3 NO ANDA rb.AddForce(transform.forward * velocity * Time.deltaTime);
@@ -68,11 +68,10 @@ public class ControllerPlayer : MonoBehaviour
                 Debug.Log("Health Component not added");
             else
                 health.getDamage(1);
-                Debug.Log(health.health);
         }
     }
-    public void onDeath() {
-        SceneManager.LoadScene("principal");
+    public void OnDeath() {
+        SceneManager.LoadScene("menu");
     }
     //private void OnCollisionExit(Collision collision)
     //{

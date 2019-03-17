@@ -25,8 +25,6 @@ public class moveCam : MonoBehaviour
         player = playerObj.GetComponent<ControllerPlayer>();
         if (player == null)
             return;
-        Debug.Log(Vector3.forward);
-        Debug.Log(distance);
         
         Vector3 objetive = player.transform.position - (Vector3.forward * distance);
         

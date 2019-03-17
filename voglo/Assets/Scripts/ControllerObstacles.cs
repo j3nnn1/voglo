@@ -19,7 +19,8 @@ public class ControllerObstacles : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject.Destroy(gameObject);
+            //here revisar porque no lo elimino
+            Destroy(gameObject);
         }
     }
 }

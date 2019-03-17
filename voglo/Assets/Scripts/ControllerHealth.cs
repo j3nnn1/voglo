@@ -34,7 +34,7 @@ public class ControllerHealth : MonoBehaviour
         health = Mathf.Max(health, 0.0f);
         UpdateBar();
         if (health == 0f)
-            SendMessage("OnDead");
+            SendMessage("OnDeath");
     }
     IEnumerable CoolDownDamage()
     {
