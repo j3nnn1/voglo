@@ -32,7 +32,7 @@ public class ControllerHealth : MonoBehaviour
         health -= damage;
 
         health = Mathf.Max(health, 0.0f);
-        Debug.Log("Antes de actualizar barra");
+        
         UpdateBar();
         if (health == 0f || health < 0f)
             SendMessage("OnDeath");
@@ -45,7 +45,7 @@ public class ControllerHealth : MonoBehaviour
     }
     private void UpdateBar()
     {
-        Debug.Log("la salud es: " + health);
+        Debug.Log("La Salud del Player es:"+health);
         if (bar != null)
             bar.value = health;
     }
