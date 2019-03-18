@@ -67,7 +67,7 @@ public class ControllerPlayer : MonoBehaviour
             if (health == null)
                 Debug.Log("Health Component not added");
             else
-                health.getDamage(1);
+                health.GetDamage(1.0f);
         }
     }
     public void OnDeath() {

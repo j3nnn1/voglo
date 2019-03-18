@@ -27,14 +27,13 @@ public class moveCam : MonoBehaviour
             return;
         
         Vector3 objetive = player.transform.position - (Vector3.forward * distance);
-        
+
+        if (objetive.y > 0) {
+            objetive.y = 0.5f;
+        }
         transform.position =
             Vector3.Lerp(transform.position, objetive, velocity * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

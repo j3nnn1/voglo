@@ -60,12 +60,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ControladorArma.cs" />
     <Compile Include="Assets\Scripts\ControllerHealth.cs" />
     <Compile Include="Assets\Scripts\ControllerObstacles.cs" />
     <Compile Include="Assets\Scripts\ControllerPlayer.cs" />
     <Compile Include="Assets\Scripts\DetectHit.cs" />
+    <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
     <Compile Include="Assets\Scripts\moveCam.cs" />
+    <Compile Include="Assets\Scripts\Proyectil.cs" />
     <Compile Include="Assets\Scripts\SpawnerTime.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/git/voglo/voglo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

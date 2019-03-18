@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ControllerObstacles : MonoBehaviour
 {
+    public float maxTimeLive = 15.0f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //GameObject.Destroy(gameObject, maxTimeLive);
+        //Destroy(gameObject, maxTimeLive);
     }
 
     // Update is called once per frame

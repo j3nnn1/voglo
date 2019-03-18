@@ -6,7 +6,7 @@ public class SpawnerTime : MonoBehaviour
 {
     public float tiempo = 1.0f;
     public GameObject obstacle;
-    public int quantity = 20;
+
     public List<Transform> posiciones;
     private float x;
     private float z;
@@ -15,19 +15,27 @@ public class SpawnerTime : MonoBehaviour
     private readonly float xinit = -1.5f;
     private readonly float zlimit = 10.0f;
     private readonly float zinit = -10.0f; // el z init  se actualiza con el movimiento del player
-    private int count = 0;
 
+    private ControllerPlayer player;
+    private readonly float distance = 0.5f;
     IEnumerator Spawn()
     {
         while (true)
         {
             yield return new WaitForSeconds(tiempo);
-            if (count < (quantity - 1))
-            {
+
                 x = Random.Range(xinit, xlimit);
                 z = Random.Range(zinit, zlimit);
+
+                GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+                player = playerObj.GetComponent<ControllerPlayer>();
+
+                if (player != null) {
+                    z = player.transform.position.z + distance;
+                }
+
                 GameObject.Instantiate(obstacle, new Vector3(x, 0, z), new Quaternion(x, 0.0f, z, 0.0f ));
-            }
+
         }
     }
     private void OnTriggerEnter(Collider other)
