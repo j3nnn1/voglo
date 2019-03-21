@@ -16,7 +16,7 @@ public class ManagerSpawn : MonoBehaviour
         z = t.position.z + largoPista;
         int indice = Random.Range(0, pistas.Count);
         GameObject p = GameObject.Instantiate(pistas[indice], new Vector3(0.0f, 0.0f, z), new Quaternion(0.0f, 0.0f, z, 0.0f));
-        Debug.Log(indice);
+        //Debug.Log(indice);
         //if (indice == 1) {
         //    //buscar el player con la position del player 
             

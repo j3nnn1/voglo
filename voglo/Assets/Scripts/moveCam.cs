@@ -5,8 +5,8 @@ using UnityEngine;
 public class moveCam : MonoBehaviour
 {
     Rigidbody rb;
-    public float distance = 10.0f;
-    public float velocity = 1.0f;
+    public float distance = 5.0f;
+    public float velocity = 2.0f;
     private ControllerPlayer player;
     private Quaternion rotOriginal;
     // Start is called before the first frame update
@@ -28,9 +28,10 @@ public class moveCam : MonoBehaviour
         
         Vector3 objetive = player.transform.position - (Vector3.forward * distance);
 
-        if (objetive.y > 0) {
-            objetive.y = 0.5f;
+        if (objetive.y < 0 || objetive.y <1.5f) {
+            objetive.y +=2.0f;
         }
+        
         transform.position =
             Vector3.Lerp(transform.position, objetive, velocity * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(Vector3.forward, Vector3.up);

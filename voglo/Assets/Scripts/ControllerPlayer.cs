@@ -27,7 +27,7 @@ public class ControllerPlayer : MonoBehaviour
 
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-
+        //Debug.Log(h);
         Vector3 right, forward;
         if (localX)
           right = transform.right;
