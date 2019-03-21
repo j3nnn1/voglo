@@ -1706,6 +1706,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Package
       objectReference: {fileID: 0}
+    - target: {fileID: 6768964154155887086, guid: 3623850efbf62244c9a551587bd49136,
+        type: 3}
+      propertyPath: m_TagString
+      value: Package
+      objectReference: {fileID: 0}
     - target: {fileID: 6768964154155887074, guid: 3623850efbf62244c9a551587bd49136,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1759,6 +1764,11 @@ PrefabInstance:
     - target: {fileID: 6768964154155887074, guid: 3623850efbf62244c9a551587bd49136,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768964154155887072, guid: 3623850efbf62244c9a551587bd49136,
+        type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

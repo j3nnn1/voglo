@@ -9,6 +9,7 @@ TagManager:
   - Fire
   - PistaTarget
   - PistaNormal
+  - Package
   layers:
   - Default
   - TransparentFX

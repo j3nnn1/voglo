@@ -45,7 +45,7 @@ public class ControllerHealth : MonoBehaviour
     }
     private void UpdateBar()
     {
-        Debug.Log("La Salud del Player es:"+health);
+        //Debug.Log("La Salud del Player es:"+health);
         if (bar != null)
             bar.value = health;
     }

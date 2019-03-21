@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\ControllerHealth.cs" />
     <Compile Include="Assets\Scripts\ControllerObstacles.cs" />
     <Compile Include="Assets\Scripts\ControllerPlayer.cs" />
+    <Compile Include="Assets\Scripts\DeliveryPackage.cs" />
     <Compile Include="Assets\Scripts\DetectHit.cs" />
     <Compile Include="Assets\Scripts\LevelComplete.cs" />
     <Compile Include="Assets\Scripts\LoopPista.cs" />
