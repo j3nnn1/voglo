@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControllerObstacles : MonoBehaviour
 {
-    public float maxTimeLive = 15.0f;
+    public float maxTimeLive = 5.0f;
     // Start is called before the first frame update
     void Start()
     {

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - Lethal
+  - Fire
+  - PistaTarget
+  - PistaNormal
   layers:
   - Default
   - TransparentFX

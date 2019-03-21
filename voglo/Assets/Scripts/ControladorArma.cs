@@ -25,7 +25,7 @@ public class ControladorArma : MonoBehaviour
 
     void Update()
     {
-        bool disparo = Input.GetKeyDown(KeyCode.X);
+        bool disparo = Input.GetKeyDown(KeyCode.C);
         //bool disparo = Input.GetButtonDown("Fire1");
         //Debug.Log("disparo:");
         //Debug.Log(disparo);
@@ -38,7 +38,7 @@ public class ControladorArma : MonoBehaviour
             GameObject p = GameObject.Instantiate(Package, handleft.position, handleft.rotation);
             Rigidbody rb = p.GetComponent<Rigidbody>();
             if (rb != null)
-                rb.velocity = -handleft.right * potencia;
+                rb.velocity = handleft.right * potencia;
             //Debug.Log("velocidad");
             //Debug.Log(rb.velocity);
             rb.transform.Translate(Vector3.right * potencia * Time.deltaTime);

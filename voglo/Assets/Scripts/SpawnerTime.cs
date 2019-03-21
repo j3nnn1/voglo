@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnerTime : MonoBehaviour
 {
-    public float tiempo = 1.0f;
+    public float tiempo = 0.5f;
     public GameObject obstacle;
 
     public List<Transform> posiciones;
@@ -13,7 +13,7 @@ public class SpawnerTime : MonoBehaviour
     private Quaternion rotOriginal;
     private readonly float xlimit = 1.5f;
     private readonly float xinit = -1.5f;
-    private readonly float zlimit = 10.0f;
+    private readonly float zlimit = 3.0f;
     private readonly float zinit = -10.0f; // el z init  se actualiza con el movimiento del player
 
     private ControllerPlayer player;
@@ -24,17 +24,18 @@ public class SpawnerTime : MonoBehaviour
         {
             yield return new WaitForSeconds(tiempo);
 
-                x = Random.Range(xinit, xlimit);
-                z = Random.Range(zinit, zlimit);
 
                 GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
                 player = playerObj.GetComponent<ControllerPlayer>();
 
-                if (player != null) {
-                    z = player.transform.position.z + distance;
-                }
+                x = Random.Range(xinit, xlimit);
+                z = Random.Range(player.transform.position.z, player.transform.position.z + zlimit);
 
-                GameObject.Instantiate(obstacle, new Vector3(x, 0, z), new Quaternion(x, 0.0f, z, 0.0f ));
+                z = z + distance;
+                x = x + distance;
+                
+
+                GameObject.Instantiate(obstacle, new Vector3(x, 0.0f, z), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f ));
 
         }
     }
