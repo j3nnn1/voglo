@@ -10,6 +10,8 @@ TagManager:
   - PistaTarget
   - PistaNormal
   - Package
+  - Vehicle
+  - counter
   layers:
   - Default
   - TransparentFX

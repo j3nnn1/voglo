@@ -44,11 +44,11 @@ public class SpawnerTime : MonoBehaviour
         if (other.CompareTag("Player") && !activo)
         {
             StartCoroutine("Spawn");
-            //AudioSource a = GetComponent<AudioSource>();
-            //if (a != null)
-            //{
-            //    a.Play();
-            //}
+            AudioSource a = GetComponent<AudioSource>();
+            if (a != null)
+            {
+                a.Play();
+            }
             activo = true;
         }
     }

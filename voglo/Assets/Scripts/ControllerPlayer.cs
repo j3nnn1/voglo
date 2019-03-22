@@ -71,7 +71,7 @@ public class ControllerPlayer : MonoBehaviour
         }
     }
     public void OnDeath() {
-        SceneManager.LoadScene("menu");
+        SceneManager.LoadScene("Fail");
     }
     //private void OnCollisionExit(Collision collision)
     //{

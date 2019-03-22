@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1880297673, guid: 65c6e537bf6fed04cba5544564c30adb, type: 3}
       propertyPath: totalPackages
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3614349190232214662, guid: 65c6e537bf6fed04cba5544564c30adb,
         type: 3}
